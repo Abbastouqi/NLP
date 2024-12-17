@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        #chat-box {
+            width: 500px;
+            border: 1px solid #ccc;
+            background: #fff;
+            padding: 10px;
+            overflow-y: scroll;
+            height: 300px;
+        }
+        #message {
+            width: 70%;
+        }
+        #send {
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <div id="chat-box"></div>
+    <input id="message" type="text" placeholder="Enter your message..." />
+    <button id="send">Send</button>
+</div>
+
+<!-- Load Socket.IO library -->
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    // Connect to the server using Socket.IO
+    const socket = io();
+
+    // Get DOM elements
+    const chatBox = document.getElementById('chat-box');
+    const messageInput = document.getElementById('message');
+    const sendButton = document.getElementById('send');
+
+    // When a new message is received from the server, display it
+    socket.on('chat message', (msg) => {
+        const messageDiv = document.createElement('div');
+        messageDiv.textContent = msg;
+        chatBox.appendChild(messageDiv);
+        chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the latest message
+    });
+
+    // Send message to the server when the button is clicked
+    sendButton.onclick = () => {
+        const message = messageInput.value;
+        if (message) {
+            socket.emit('chat message', message); // Emit 'chat message' event to the server
+            messageInput.value = ''; // Clear the input field
+        }
+    };
+
+    // Optional: Press Enter to send the message
+    messageInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            sendButton.click();
+        }
+    });
+</script>
+
+</body>
+</html>
