@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Dense, Dropout, Flatten
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Dense, Dropout, Flatten, Input
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
@@ -12,17 +12,16 @@ class EmotionRecognition:
         
     def build_model(self):
         model = Sequential([
-            Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=(48, 48, 1)),
+            Input(shape=(48, 48, 1)),
+            Conv2D(32, kernel_size=(3, 3), activation='relu'),
             Conv2D(64, kernel_size=(3, 3), activation='relu'),
             MaxPooling2D(pool_size=(2, 2)),
             Dropout(0.25),
-            
             Conv2D(128, kernel_size=(3, 3), activation='relu'),
             MaxPooling2D(pool_size=(2, 2)),
             Conv2D(128, kernel_size=(3, 3), activation='relu'),
             MaxPooling2D(pool_size=(2, 2)),
             Dropout(0.25),
-            
             Flatten(),
             Dense(1024, activation='relu'),
             Dropout(0.5),
@@ -74,28 +73,20 @@ class EmotionRecognition:
         return history
     
     def detect_emotion(self, frame):
-        # Load the pre-trained face cascade
         face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-        
-        # Convert frame to grayscale
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        
-        # Detect faces
         faces = face_cascade.detectMultiScale(gray, 1.3, 5)
         
         for (x, y, w, h) in faces:
-            # Extract face ROI
             roi_gray = gray[y:y+h, x:x+w]
             roi_gray = cv2.resize(roi_gray, (48, 48))
             roi_gray = roi_gray.astype('float')/255.0
             roi_gray = np.expand_dims(roi_gray, axis=0)
             roi_gray = np.expand_dims(roi_gray, axis=-1)
             
-            # Make prediction
             prediction = self.model.predict(roi_gray)
             emotion_label = self.emotions[np.argmax(prediction)]
             
-            # Draw rectangle and label
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
             cv2.putText(frame, emotion_label, (x, y-10), 
                        cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
@@ -105,6 +96,14 @@ class EmotionRecognition:
     def start_webcam(self):
         cap = cv2.VideoCapture(0)
         
+        if not cap.isOpened():
+            print("Switching to alternative camera index")
+            cap = cv2.VideoCapture(1)
+        
+        if not cap.isOpened():
+            print("No camera detected. Please check your camera connection.")
+            return
+            
         while True:
             ret, frame = cap.read()
             if not ret:
@@ -120,13 +119,7 @@ class EmotionRecognition:
         cv2.destroyAllWindows()
 
 def main():
-    # Initialize emotion recognition system
     emotion_detector = EmotionRecognition()
-    
-    # If you have training data, you can train the model
-    # emotion_detector.train_model('path/to/train/data', 'path/to/validation/data')
-    
-    # Start real-time emotion detection
     emotion_detector.start_webcam()
 
 if __name__ == "__main__":
