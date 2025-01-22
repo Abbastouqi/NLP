@@ -1,0 +1,10 @@
+data:
+  processed_data_path: ../data/processed_data
+  raw_data_path: ../data/raw_data
+model:
+  bert_model: bert-base-uncased
+  gpt2_model: gpt2
+training:
+  batch_size: 32
+  learning_rate: 2.0e-05
+  num_epochs: 3
