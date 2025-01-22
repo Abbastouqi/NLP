@@ -1,3 +1,72 @@
+# Advanced AI/ML Projects Collection
+
+A comprehensive collection of AI and Machine Learning projects showcasing various applications from NLP to Computer Vision.
+
+## Projects Overview
+
+### 1. Keyword Generation with Transformer-Based Models
+Advanced NLP implementation using BERT embeddings and GPT-2 with LoRA layers for efficient keyword generation.
+
+### 2. LLM Applications
+Practical applications of Large Language Models including content summarization, text classification, and sentiment analysis.
+
+### 3. Stock Market Prediction using AI
+LSTM-based neural network implementation for stock market price prediction.
+
+### 4. Emotion Recognition using Deep Learning
+Real-time emotion recognition using CNN and OpenCV.
+
+## Detailed Project Descriptions
+
+### 1. Keyword Generation Project
+
+
+
+#### Features
+- BERT embeddings for text representation
+- GPT-2 with LoRA layers for efficient fine-tuning
+- Custom dataset handling for marketing data
+- LoRA Configuration:
+  - r=8 (rank dimension)
+  - lora_alpha=32
+  - Targeted attention modules
+  - 0.1 dropout rate
+
+### 2. LLM Applications
+#### Features
+- Content Summarization
+- Text Classification
+- Sentiment Analysis
+- Zero-shot Classification with custom labels
+
+### 3. Stock Market Prediction
+#### Features
+- Real-time stock data fetching
+- LSTM neural network architecture
+- Data preprocessing and scaling
+- Visual prediction results
+- Historical price analysis
+
+### 4. Emotion Recognition
+#### Features
+- Real-time facial emotion detection
+- Seven emotion classifications
+- CNN-based architecture
+- Webcam integration
+- Data augmentation support
+
+## Installation & Setup
+
+1. Clone the repository
+```bash
+git clone https://github.com/Abbastouqi/NLP.git
+cd NLP
+
+
+
+
+
+
 # AI/ML Projects Collection
 
 ## Project 1: LLM Applications
