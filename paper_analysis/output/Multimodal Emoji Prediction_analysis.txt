@@ -1,0 +1,65 @@
+Analysis Report for: Multimodal Emoji Prediction.pdf
+==================================================
+
+DOCUMENT KEYWORDS:
+--------------------
+• Emoji
+• Emoji Prediction
+• social media
+• Barbieri
+• Francesco Barbieri
+• Conference
+• visual
+• Multimodal
+• textual
+• Instagram posts
+• Prediction
+• social
+• prediction task
+• Text
+• media
+
+SECTION-WISE ANALYSIS:
+--------------------
+
+ABSTRACT:
+~~~~~~~~
+
+Key Points:
+• commonly included
+• social media
+• abstract emojis
+• emojis
+• media text
+
+Summary:
+emojis are small images that are commonly included in social media text messages. the combination of visual and textual content in the same message builds up a modern way of communication, that automatic systems are not used to deal with. instagram posts are composed of pictures together with texts which sometimes include emojis.
+--------------------------------------------------
+
+INTRODUCTION:
+~~~~~~~~~~~~
+
+Key Points:
+• emoji
+• emoji prediction
+• textual
+• frequent emojis
+• visual
+
+Summary:
+use of emojis in social media has increased exponentially, changing the way we communicate. textual information can be used to predict emojis associated to text. a multimodal approach increases the emoji prediction accu- racy.
+--------------------------------------------------
+
+CONCLUSION:
+~~~~~~~~~~
+
+Key Points:
+• emoji
+• conference
+• pages
+• proceedings
+• social media
+
+Summary:
+using a synergistic approach, we can outperform state of the art unimodal approaches. as future work, we plan to extend our mod- els by considering the prediction of more than one emoji per social media post.
+--------------------------------------------------

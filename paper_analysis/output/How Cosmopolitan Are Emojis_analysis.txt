@@ -1,0 +1,65 @@
+Analysis Report for: How Cosmopolitan Are Emojis.pdf
+==================================================
+
+DOCUMENT KEYWORDS:
+--------------------
+• Emojis
+• Languages
+• USA
+• erent languages
+• erent
+• ESP ITA
+• USA USA
+• similarity
+• Meaning
+• British English
+• ITA
+• English
+• Twitter emojis
+• Italian
+• similar
+
+SECTION-WISE ANALYSIS:
+--------------------
+
+ABSTRACT:
+~~~~~~~~
+
+Key Points:
+• abstract choosing
+• daily life
+• visually complement
+• emojis
+• erent
+
+Summary:
+emojis are pictures, which are naturally combined with plain text, thus creating a new form of language. they can be interpreted and used in dierent ways. the overall se- mantics of the subset of the emojis we studied is preserved across all the languages we analysed.
+--------------------------------------------------
+
+INTRODUCTION:
+~~~~~~~~~~~~
+
+Key Points:
+• emojis
+• languages
+• erent languages
+• erent
+• usa
+
+Summary:
+during the last few years, twitter users have started to extensively use emojis in their posts. emojis are pictures that can be naturally combined with plain text to create a new form of language. the sense of an emoji may change from language to culture to cul- ture.
+--------------------------------------------------
+
+CONCLUSION:
+~~~~~~~~~~
+
+Key Points:
+• pages
+• emojis
+• emoticons
+• conference
+• acm
+
+Summary:
+this paper explores the meaning and usage of emojis across four languages. american english, british english, peninsular spanish and italian are studied. results suggest that the overall semantics of the most frequent emojis is similar.
+--------------------------------------------------

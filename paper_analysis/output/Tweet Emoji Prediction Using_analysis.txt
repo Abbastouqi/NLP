@@ -1,0 +1,65 @@
+Analysis Report for: Tweet Emoji Prediction Using.pdf
+==================================================
+
+DOCUMENT KEYWORDS:
+--------------------
+• Emojis
+• CNN
+• Model
+• word
+• LSTM
+• tweets
+• word encoder
+• predict emojis
+• encoder
+• predict
+• representations
+• Francesco Barbieri
+• Emoji Prediction
+• China
+• emojis evoked
+
+SECTION-WISE ANALYSIS:
+--------------------
+
+ABSTRACT:
+~~~~~~~~
+
+Key Points:
+• emojis
+• word
+• tweets
+• representations
+• cnn
+
+Summary:
+emojis are widely used by social network users when post-ing messages. it is important to mine the rela- tionships between plain texts and emojis. our approach is self-labeling and free from expensive and time-consuming manual annotation.
+--------------------------------------------------
+
+RESULTS:
+~~~~~~~
+
+Key Points:
+• emojis
+• model
+• performance
+• lstm
+• embedding size
+
+Summary:
+performance evaluation in this section, we compare the performance of our ap- proach with several baselines. the methods to be com- pared include: svm, cnn, lstm, ll, clc, clca and ll.
+--------------------------------------------------
+
+CONCLUSION:
+~~~~~~~~~~
+
+Key Points:
+• francesco barbieri
+• horacio saggion
+• francesco
+• emoji
+• francesco ronzano
+
+Summary:
+in this paper, we introduce a neural approach for multi-label emoji prediction in tweets. we propose a hierarchical neu- ral model with attention mechanism to address this task. the experimental results validate the effectiveness of our approach.
+--------------------------------------------------
