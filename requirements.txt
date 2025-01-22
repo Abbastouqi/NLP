@@ -1,0 +1,11 @@
+transformers==4.30.2
+torch==2.0.1
+numpy==1.24.3
+tqdm==4.65.0
+requests==2.31.0
+regex==2023.6.3
+packaging==23.1
+filelock==3.12.2
+huggingface-hub==0.15.1
+tokenizers==0.13.3
+protobuf==4.23.3
