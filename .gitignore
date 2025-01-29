@@ -1,18 +1,7 @@
-echo "# Python virtual environment
+# Ignore virtual environment
 venv/
-ENV/
 env/
+.venv/
 
-# Python cache files
+# Ignore __pycache__
 __pycache__/
-*.py[cod]
-*$py.class
-
-# Distribution / packaging
-dist/
-build/
-*.egg-info/
-
-# IDE settings
-.vscode/
-.idea/" > .gitignore
